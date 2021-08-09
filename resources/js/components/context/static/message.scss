@@ -1,0 +1,99 @@
+$lato: 'Lato', sans-serif;
+$public: 'Public Sans', sans-serif;
+$box: rgb(145 158 171 / 24%) 0px 0px 2px 0px,
+  rgb(145 158 171 / 24%) 0px 16px 32px -4px;
+$font-family-Inter: 'Inter', sans-serif;
+$font-family-Kanit: 'Kanit', sans-serif;
+$font-family-Lato: 'Lato', sans-serif;
+$font-family-Open: 'Open Sans', sans-serif;
+$font-family-Public: 'Public Sans', sans-serif;
+$white: rgba(255, 255, 255);
+$boxshadow-pedia: rgb(0 0 0 / 7%) 0px 4px 6px -1px;
+$boxshadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+$boxshadow-button: rgb(0 171 85 / 24%) 0px 8px 16px 0px;
+$gray: #c9d1d9;
+$color: rgb(0, 171, 85);
+$text: rgba(49, 53, 59, 0.68);
+
+.message,
+.message-close {
+  position: fixed;
+  width: 100%;
+  max-width: 400px;
+  background-color: $white;
+  box-shadow: $boxshadow-pedia;
+  -webkit-box-shadow: $boxshadow-pedia;
+  -moz-box-shadow: $boxshadow-pedia;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  .message-exit {
+    button {
+      background-color: transparent;
+      .icons {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .message-body {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    font-size: 13.333px;
+    font-family: $public;
+    padding: 5px;
+  }
+  .message-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .box {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      box-shadow: $boxshadow-pedia;
+      -webkit-box-shadow: $boxshadow-pedia;
+      -moz-box-shadow: $boxshadow-pedia;
+      border-radius: 10px;
+      .icons {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+.message {
+  animation: message 1s forwards;
+}
+
+.message-close {
+  animation: message-close 1s forwards;
+}
+
+@keyframes message {
+  from {
+    top: 0;
+    left: -1200px;
+  }
+  to {
+    top: 5px;
+    left: 5px;
+  }
+}
+
+@keyframes message-close {
+  from {
+    top: 5px;
+    left: 5px;
+  }
+  to {
+    top: 0;
+    left: -1200px;
+  }
+}
